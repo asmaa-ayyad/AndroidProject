@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    tools:context=".ui.restaurant.restaurant">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/salecard"
+        android:layout_width="340dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:outlineSpotShadowColor="@android:color/holo_purple"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+
+            android:id="@+id/constraintLayout"
+            android:layout_width="391dp"
+            android:layout_height="90dp"
+
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="111dp"
+                android:layout_marginTop="28dp"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="15$"
+                android:textColor="#7659C1"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView5"
+                android:layout_width="123dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:elevation="3000dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/burger" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150dp"
+                android:layout_height="134dp"
+
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/cardbutt"
+                android:backgroundTint="#DBCFFB"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/rate" />
+
+            <TextView
+                android:id="@+id/menuButton"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="272dp"
+                android:elevation="10dp"
+                android:text="...."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="6dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="349dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/details"
+                android:layout_width="55dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="76dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/cardbutwhite"
+                android:backgroundTint="@color/white"
+                android:text="       >>>"
+                android:textColor="#D9CDF9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="175dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/cardbut2"
+                android:text="GO TO THE DETAILS"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

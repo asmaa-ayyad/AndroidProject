@@ -1,0 +1,240 @@
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/restdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#45D9CDF9">
+
+            ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="151dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="meal Name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/meal_image" />
+    -->
+
+            <ImageView
+                android:id="@+id/rounded_bg"
+                android:layout_width="413dp"
+                android:layout_height="428dp"
+                android:src="@drawable/rounded_corner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/divider"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <ImageView
+                android:id="@+id/meal_image"
+                android:layout_width="301dp"
+                android:layout_height="271dp"
+                android:layout_marginBottom="-50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/burger"
+                app:layout_constraintBottom_toTopOf="@id/rounded_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="6dp"
+            android:text="Strawberry Shake"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/meal_image" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtv_item_rating"
+            app:layout_constraintBottom_toBottomOf="@id/txtv_item_rating"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="1"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@android:color/holo_orange_dark"
+            android:scaleX="0.4"
+            android:scaleY="0.4" />
+
+        <TextView
+            android:id="@+id/txtv_item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="8dp"
+            android:text="4.8"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_name"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_fav"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/circle"
+            android:padding="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintTop_toTopOf="@id/tv_item_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/txtv_item_rating"
+
+            />
+        <ImageButton
+            android:id="@+id/btn_minus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_minus"
+            android:scaleType="fitXY"
+            android:background="@drawable/rouded_square"
+            app:layout_constraintStart_toStartOf="@id/tv_item_name"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
+
+
+        <TextView
+            android:id="@+id/tv_item_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="1"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/btn_minus"
+            app:layout_constraintTop_toTopOf="@id/btn_minus" app:layout_constraintBottom_toBottomOf="@id/btn_minus"/>
+        <ImageButton
+            android:id="@+id/btn_plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_plus"
+            android:scaleType="fitXY"
+            android:background="@drawable/rouded_square"
+            app:layout_constraintStart_toEndOf="@id/tv_item_quantity"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
+
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:text="11"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_minus"
+            app:layout_constraintEnd_toEndOf="@id/btn_fav"
+            app:layout_constraintTop_toTopOf="@id/btn_minus" />
+
+        <TextView
+            android:id="@+id/tv_item_detail"
+            android:layout_width="335dp"
+            android:layout_height="42dp"
+            android:layout_marginVertical="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="40dp"
+            android:text="Cold, creamy, so thick that your straw stands straight up ,and filled with juicy berries"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_item_name"
+            app:layout_constraintTop_toBottomOf="@id/btn_minus"
+
+            />
+        <!--
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rouded_square"
+                android:padding="14dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_item_name" />
+        -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editmeal2"
+                android:layout_width="260dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="308dp"
+                android:background="@drawable/rounded_rectangle"
+                android:text="edit"
+                android:textAllCaps="false"
+
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rounded_bg" />
+
+            <TextView
+            android:id="@+id/textView18"
+            android:layout_width="16dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="36dp"
+            android:text="$"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_item_price"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fav" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>

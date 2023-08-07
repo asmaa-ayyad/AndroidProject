@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dashboord">
+
+    <fragment
+        android:id="@+id/navigation_home2"
+        android:name="com.example.test2.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_restaurant"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_chart2"
+            app:destination="@id/chart2" />
+        <action
+            android:id="@+id/action_navigation_home_to_restFragment"
+            app:destination="@id/restFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.test2.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.test2.ui.restaurant.restaurant"
+        android:label="fragment_restaurant2"
+        tools:layout="@layout/restrecycler" >
+        <action
+            android:id="@+id/action_restaurant_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_restaurant_to_addrestaurant"
+            app:destination="@id/addrestaurant" />
+    </fragment>
+    <fragment
+        android:id="@+id/addrestaurant"
+        android:name="com.example.test2.ui.restaurant.addrestaurant"
+        android:label="fragment_addrestaurant"
+        tools:layout="@layout/fragment_addrestaurant" >
+        <action
+            android:id="@+id/action_addrestaurant_to_restaurant"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_addrestaurant_self"
+            app:destination="@id/addrestaurant" />
+    </fragment>
+    <fragment
+        android:id="@+id/chart2"
+        android:name="com.example.test2.chart"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
+    <activity
+        android:id="@+id/dash"
+        android:name="com.example.test2.dash"
+        android:label="activity_dash"
+        tools:layout="@layout/activity_dash" />
+    <fragment
+        android:id="@+id/dashboord"
+        android:name="com.example.test2.ui.dashbord.dashbordFragment"
+        android:label="fragment_dashbord"
+        tools:layout="@layout/fragment_dashbord" >
+        <action
+            android:id="@+id/action_dashboord_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_dashboord_to_loginn"
+            app:destination="@id/loginn" />
+    </fragment>
+    <fragment
+        android:id="@+id/chart"
+        android:name="com.example.test2.First3Fragment"
+        android:label="fragment_first3"
+        tools:layout="@layout/fragment_first3" />
+    <fragment
+        android:id="@+id/restFragment"
+        android:name="com.example.test2.restFragment"
+        android:label="restFragment" />
+    <fragment
+        android:id="@+id/addmeal"
+        android:name="com.example.test2.ui.meal.addmeal"
+        android:label="addmeal" >
+        <action
+            android:id="@+id/action_addmeal_to_restFragment"
+            app:destination="@id/restFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.test2.ui.log.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_loginn"
+            app:destination="@id/loginn" />
+    </fragment>
+    <activity
+        android:id="@+id/restdetailacrivity"
+        android:name="com.example.test2.ui.restaurant.restdetailacrivity"
+        android:label="restdetailacrivity" />
+    <activity
+        android:id="@+id/loginn"
+        android:name="com.example.test2.loginn"
+        android:label="activity_loginn"
+        tools:layout="@layout/activity_loginn" />
+</navigation>
